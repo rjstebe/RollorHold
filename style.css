@@ -25,5 +25,7 @@
 }
 
 .die-selector .recommended-action{
-
+  text-align: center;
+  border: 1px yellow;
+  background: yellow;
 }
