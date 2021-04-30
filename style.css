@@ -1,7 +1,29 @@
-.die {
-  display: flex;
+.die-selector {
+  display: inline-flex;
+  flex-direction: column;
 }
 
-.die *{
+.die-selector *{
   display: block;
+}
+
+.die-selector button{
+  border-width: 0.5px;
+  outline: none;
+}
+
+.die-selector button:hover{
+  background-color: lightgrey;
+}
+
+.die-selector .increment-value{
+  border-radius: 8px 8px 3px 3px;
+}
+
+.die-selector .decrement-value{
+  border-radius: 3px 3px 8px 8px;
+}
+
+.die-selector .recommended-action{
+
 }
