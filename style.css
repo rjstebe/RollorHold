@@ -1,1 +1,7 @@
-/* empty for now */
+.die {
+  display: flex;
+}
+
+.die *{
+  display: block;
+}
