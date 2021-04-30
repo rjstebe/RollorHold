@@ -5,44 +5,19 @@
   <script type="text/javascript" src="recommend.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body onload="onLoad()">
   <!-- HTML5 article tag for content -->
   <div id="content">
 
     <header>Roll or Hold</header>
 
     <form name="Calculator" action="">
-      <div id="dice" onload="alert('loaded!');loadDieSelectors()">
-        <div class="die-selector">
-          <button class="increment-value" type="button" onclick="alert('increment')">&#x25B2;</button>
-          <img class="die-image" width="50" alt="Dice-1-b" src="img/Dice-1-b.svg">
-          <button class="decrement-value" type="button" onclick="alert('decrement')">&#x25BC;</button>
-          <div class="recommended-action">Roll</div>
-        </div>
-        <div class="die-selector">
-          <button class="increment-value" type="button" onclick="alert('increment')">&#x25B2;</button>
-          <img class="die-image" width="50" alt="Dice-1-b" src="img/Dice-1-b.svg">
-          <button class="decrement-value" type="button" onclick="alert('decrement')">&#x25BC;</button>
-          <div class="recommended-action">Roll</div>
-        </div>
-        <div class="die-selector">
-          <button class="increment-value" type="button" onclick="alert('increment')">&#x25B2;</button>
-          <img class="die-image" width="50" alt="Dice-1-b" src="img/Dice-1-b.svg">
-          <button class="decrement-value" type="button" onclick="alert('decrement')">&#x25BC;</button>
-          <div class="recommended-action">Roll</div>
-        </div>
-        <div class="die-selector">
-          <button class="increment-value" type="button" onclick="alert('increment')">&#x25B2;</button>
-          <img class="die-image" width="50" alt="Dice-1-b" src="img/Dice-1-b.svg">
-          <button class="decrement-value" type="button" onclick="alert('decrement')">&#x25BC;</button>
-          <div class="recommended-action">Roll</div>
-        </div>
-        <div class="die-selector">
-          <button class="increment-value" type="button" onclick="alert('increment')">&#x25B2;</button>
-          <img class="die-image" width="50" alt="Dice-1-b" src="img/Dice-1-b.svg">
-          <button class="decrement-value" type="button" onclick="alert('decrement')">&#x25BC;</button>
-          <div class="recommended-action">Roll</div>
-        </div>
+      <div id="dice">
+        <div class="die-selector"></div>
+        <div class="die-selector"></div>
+        <div class="die-selector"></div>
+        <div class="die-selector"></div>
+        <div class="die-selector"></div>
       </div>
     </form>
 
