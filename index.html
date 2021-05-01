@@ -3,24 +3,41 @@
 <head>
   <title> Roll Or Hold </title>
   <script type="text/javascript" src="recommend.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body onload="onLoad()">
   <!-- HTML5 article tag for content -->
   <div id="content">
 
     <header>Roll or Hold</header>
 
-    <form name="Calculator" action="">
-      <div id="dice">
-        <div class="die">
-          <button type="button" onclick="alert(test)">up</button>
-          <a title="Commons., Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Dice-1-b.svg">
-            <img width="512" alt="Dice-1-b" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Dice-1-b.svg/512px-Dice-1-b.svg.png">
-          </a>
-          <button type="button" onclick="alert(test)">down</button>
+    <div id="panel">
+      <form name="Calculator" action="">
+        <input id="rolls-remaining" type="number" name="rolls-remaining" min="0" max="2" value="2">
+        <label for="rolls-remaining">rolls remaining</label>
+        <div id="dice">
+          <div class="die-selector"></div>
+          <div class="die-selector"></div>
+          <div class="die-selector"></div>
+          <div class="die-selector"></div>
+          <div class="die-selector"></div>
         </div>
-      </div>
-    </form>
+        <div id="recommendation">
+          Recommended:<br>
+          <div class="recommended-action">Roll</div>
+          <div class="recommended-action">Roll</div>
+          <div class="recommended-action">Roll</div>
+          <div class="recommended-action">Roll</div>
+          <div class="recommended-action">Roll</div>
+        </div>
+        <div id="scores">
+          <div class="scores-column">
+          </div>
+          <div class="scores-column">
+          </div>
+        </div>
+      </form>
+    </div>
 
     <footer>Ryan Stebe &copy; 2021</footer>
   </div>
