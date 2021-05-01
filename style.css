@@ -1,4 +1,12 @@
-.die-selector {
+#panel{
+  background-color: #FFF8C1
+}
+
+#rolls-remaining{
+  width: 2em
+}
+
+.die-selector{
   display: inline-flex;
   flex-direction: column;
 }
@@ -7,25 +15,32 @@
   display: block;
 }
 
-.die-selector button{
+button{
   border-width: 0.5px;
   outline: none;
 }
 
-.die-selector button:hover{
+button:hover{
   background-color: lightgrey;
 }
 
-.die-selector .increment-value{
+.increment-value{
   border-radius: 8px 8px 3px 3px;
 }
 
-.die-selector .decrement-value{
+.decrement-value{
   border-radius: 3px 3px 8px 8px;
 }
 
-.die-selector .recommended-action{
-  text-align: center;
+.die-image{
+  background-color: white;
+  border-radius: 7px;
+}
+
+.recommended-action{
+  display: inline-block;
+  width: 50px;
   border: 1px yellow;
   background: yellow;
+  text-align: center;
 }

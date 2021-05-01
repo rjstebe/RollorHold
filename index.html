@@ -11,17 +11,33 @@
 
     <header>Roll or Hold</header>
 
-    <form name="Calculator" action="">
-      <label for="rolls-remaining">Rolls remaining:</label>
-      <input type="range" name="rolls-remaining" min="0" max="2">
-      <div id="dice">
-        <div class="die-selector"></div>
-        <div class="die-selector"></div>
-        <div class="die-selector"></div>
-        <div class="die-selector"></div>
-        <div class="die-selector"></div>
-      </div>
-    </form>
+    <div id="panel">
+      <form name="Calculator" action="">
+        <input id="rolls-remaining" type="number" name="rolls-remaining" min="0" max="2" value="2">
+        <label for="rolls-remaining">rolls remaining</label>
+        <div id="dice">
+          <div class="die-selector"></div>
+          <div class="die-selector"></div>
+          <div class="die-selector"></div>
+          <div class="die-selector"></div>
+          <div class="die-selector"></div>
+        </div>
+        <div id="recommendation">
+          Recommended:<br>
+          <div class="recommended-action">Roll</div>
+          <div class="recommended-action">Roll</div>
+          <div class="recommended-action">Roll</div>
+          <div class="recommended-action">Roll</div>
+          <div class="recommended-action">Roll</div>
+        </div>
+        <div id="scores">
+          <div class="scores-column">
+          </div>
+          <div class="scores-column">
+          </div>
+        </div>
+      </form>
+    </div>
 
     <footer>Ryan Stebe &copy; 2021</footer>
   </div>

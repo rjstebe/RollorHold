@@ -48,8 +48,7 @@ function loadDieSelectors(){
     dieSelectors[i].innerHTML=
     `<button class="increment-value" type="button" onclick="dice[${i}].increment_face()">&#x25B2;</button>
     <img class="die-image" width="50" alt="Dice-1-b" src="img/Dice-1-b.svg">
-    <button class="decrement-value" type="button" onclick="dice[${i}].decrement_face()">&#x25BC;</button>
-    <div class="recommended-action">Roll</div>`
+    <button class="decrement-value" type="button" onclick="dice[${i}].decrement_face()">&#x25BC;</button>`
     dice[i] = new die(1, dieSelectors[i].getElementsByClassName("die-image")[0]);
   }
 }
