@@ -3,6 +3,9 @@
 <head>
   <title> Roll Or Hold </title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    var pointType = "randomize";
+  </script>
   <script type="text/javascript" src="recommend.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -11,16 +14,14 @@
     <h1 id="title">Roll or Hold</h1>
     <h2 id="subtitle">A Calculator for Dice Rolling Games</h2>
   </header>
-
-  <!-- HTML5 article tag for content -->
   <div id="content">
     <nav>
-      <a href="index.html"><div class="nav-button" style="background-color: #b32424">Yahtzee</div></a>
-      <a href="yam-slam.html"><div class="nav-button">Yam-Slam</div></a>
-      <a href="how-to-use.html"><div class="nav-button">How to Use</div></a>
+      <a href="index.html"><div class="nav-button" style="background-color: #b32424">Yahtzee</div></a><!--
+      --><a href="yam-slam.html"><div class="nav-button">Yam-Slam</div></a><!--
+      --><a href="how-to-use.html"><div class="nav-button">How to Use</div></a>
     </nav>
     <div id="calculator">
-      <input id="rolls-remaining" type="number" name="rolls-remaining" min="0" max="2" value="2">
+      <input id="rolls-remaining" type="number" name="rolls-remaining" oninput="updateOutput()" min="0" max="2" value="2">
       <label for="rolls-remaining">rolls remaining</label><div class="help-icon tooltip">
         <span class="tooltip-text">Test tooltip</span>
       </div>
@@ -31,8 +32,7 @@
         <div class="die-selector"></div>
         <div class="die-selector"></div>
       </div>
-      <div id="recommendation">
-        Recommended:<div class="help-icon tooltip">
+      <div id="recommendation">Recommended:<div class="help-icon tooltip">
           <span class="tooltip-text">Test tooltip</span>
         </div><br>
         <div class="recommended-action">Hold</div>
@@ -47,42 +47,42 @@
         <table class="scores-column">
           <tr>
             <td><div class="expected">5pts</div></td>
-            <td><input id="ones" type="checkbox" name="ones"></td>
+            <td><input id="ones" type="checkbox" name="ones" oninput="updateOutput()"></td>
             <td><label for="ones">Ones</label><div class="help-icon tooltip">
               <span class="tooltip-text">Test tooltip</span>
             </div></td>
           </tr>
           <tr>
             <td><div class="expected">0pts</div></td>
-            <td><input id="twos" type="checkbox" name="twos"></td>
+            <td><input id="twos" type="checkbox" name="twos" oninput="updateOutput()"></td>
             <td><label for="twos">Twos</label><div class="help-icon tooltip">
               <span class="tooltip-text">Test tooltip</span>
             </div></td>
           </tr>
           <tr>
             <td><div class="expected">0pts</div></td>
-            <td><input id="threes" type="checkbox" name="threes"></td>
+            <td><input id="threes" type="checkbox" name="threes" oninput="updateOutput()"></td>
             <td><label for="threes">Threes</label><div class="help-icon tooltip">
               <span class="tooltip-text">Test tooltip</span>
             </div></td>
           </tr>
           <tr>
             <td><div class="expected">0pts</div></td>
-            <td><input id="fours" type="checkbox" name="fours"></td>
+            <td><input id="fours" type="checkbox" name="fours" oninput="updateOutput()"></td>
             <td><label for="fours">Fours</label><div class="help-icon tooltip">
               <span class="tooltip-text">Test tooltip</span>
             </div></td>
           </tr>
           <tr>
             <td><div class="expected">0pts</div></td>
-            <td><input id="fives" type="checkbox" name="fives"></td>
+            <td><input id="fives" type="checkbox" name="fives" oninput="updateOutput()"></td>
             <td><label for="fives">Fives</label><div class="help-icon tooltip">
               <span class="tooltip-text">Test tooltip</span>
             </div></td>
           </tr>
           <tr>
             <td><div class="expected">0pts</div></td>
-            <td><input id="sixes" type="checkbox" name="sixes"></td>
+            <td><input id="sixes" type="checkbox" name="sixes" oninput="updateOutput()"></td>
             <td><label for="sixes">Sixes</label><div class="help-icon tooltip">
               <span class="tooltip-text">Test tooltip</span>
             </div></td>
@@ -91,49 +91,49 @@
         <table class="scores-column">
           <tr>
             <td><div class="expected">5pts</div></td>
-            <td><input id="3-of-a-kind" type="checkbox" name="3-of-a-kind"></td>
+            <td><input id="3-of-a-kind" type="checkbox" name="3-of-a-kind" oninput="updateOutput()"></td>
             <td><label for="3-of-a-kind">3-of-a-kind</label><div class="help-icon tooltip">
               <span class="tooltip-text">Test tooltip</span>
             </div></td>
           </tr>
           <tr>
             <td><div class="expected">5pts</div></td>
-            <td><input id="4-of-a-kind" type="checkbox" name="4-of-a-kind"></td>
+            <td><input id="4-of-a-kind" type="checkbox" name="4-of-a-kind" oninput="updateOutput()"></td>
             <td><label for="4-of-a-kind">4-of-a-kind</label><div class="help-icon tooltip">
               <span class="tooltip-text">Test tooltip</span>
             </div></td>
           </tr>
           <tr>
             <td><div class="expected">25pts</div></td>
-            <td><input id="full-house" type="checkbox" name="full-house"></td>
+            <td><input id="full-house" type="checkbox" name="full-house" oninput="updateOutput()"></td>
             <td><label for="full-house">Full House</label><div class="help-icon tooltip">
               <span class="tooltip-text">Test tooltip</span>
             </div></td>
           </tr>
           <tr>
             <td><div class="expected">30pts</div></td>
-            <td><input id="small-straight" type="checkbox" name="small-straight"></td>
+            <td><input id="small-straight" type="checkbox" name="small-straight" oninput="updateOutput()"></td>
             <td><label for="small-straight">Small Straight</label><div class="help-icon tooltip">
               <span class="tooltip-text">Test tooltip</span>
             </div></td>
           </tr>
           <tr>
             <td><div class="expected">40pts</div></td>
-            <td><input id="large-straight" type="checkbox" name="large-straight"></td>
+            <td><input id="large-straight" type="checkbox" name="large-straight" oninput="updateOutput()"></td>
             <td><label for="large-straight">Large Straight</label><div class="help-icon tooltip">
               <span class="tooltip-text">Test tooltip</span>
             </div></td>
           </tr>
           <tr>
             <td><div class="expected">50pts</div></td>
-            <td><input id="yahtzee" type="checkbox" name="yahtzee"></td>
+            <td><input id="yahtzee" type="checkbox" name="yahtzee" oninput="updateOutput()"></td>
             <td><label for="yahtzee">Yahtzee</label><div class="help-icon tooltip">
               <span class="tooltip-text">Test tooltip</span>
             </div></td>
           </tr>
           <tr>
             <td><div class="expected">5pts</div></td>
-            <td><input id="chance" type="checkbox" name="chance"></td>
+            <td><input id="chance" type="checkbox" name="chance" oninput="updateOutput()"></td>
             <td><label for="chance">Chance</label><div class="help-icon tooltip">
               <span class="tooltip-text">Test tooltip</span>
             </div></td>

@@ -29,10 +29,12 @@ class die {
 
   increment_face(){
     this.set_face((this.value == 6) ? 1 : this.value+1);
+    updateOutput();
   }
 
   decrement_face(){
     this.set_face((this.value == 1) ? 6 : this.value-1);
+    updateOutput();
   }
 }
 
@@ -84,5 +86,38 @@ function toggleScores(){
     icon.style.transform = "rotate(0deg)";
     dropdown.style.height = "0";
     dropdown.style.overflow = "hidden";
+  }
+}
+
+function updateOutput(){
+  var callback = (e) => {
+    e.target.style.transition = "background-color 2s";
+    e.target.style.setProperty("background-color", "yellow");
+  };
+  //if randomizing score options' values, update each of them
+  if (pointType == "randomize"){
+    var expecteds = document.getElementsByClassName("expected");
+    for (i = 0; i < expecteds.length; i++){
+      var oldValue = expecteds[i].innerHTML;
+      expecteds[i].innerHTML = Math.floor(Math.random() * 36) + "pts";
+      if (oldValue != expecteds[i].innerHTML){
+        expecteds[i].removeEventListener("transitionend", callback, {once: true});
+        expecteds[i].style.transition = "background-color 1ms";
+        expecteds[i].style.setProperty("background-color", "#CB2F2F");
+        expecteds[i].addEventListener("transitionend", callback, {once: true});
+      }
+    }
+  }
+  //update recommendations randomly
+  var recommendedActions = document.getElementsByClassName("recommended-action");
+  for (i = 0; i < recommendedActions.length; i++){
+    var oldValue = recommendedActions[i].innerHTML;
+    recommendedActions[i].innerHTML = Math.floor(Math.random() * 2) ? "Hold" : "Roll";
+    if (oldValue != recommendedActions[i].innerHTML){
+      recommendedActions[i].removeEventListener("transitionend", callback, {once: true});
+      recommendedActions[i].style.transition = "background-color 1ms";
+      recommendedActions[i].style.setProperty("background-color", "#CB2F2F");
+      recommendedActions[i].addEventListener("transitionend", callback, {once: true});
+    }
   }
 }
