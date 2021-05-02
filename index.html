@@ -21,7 +21,9 @@
     </nav>
     <div id="calculator">
       <input id="rolls-remaining" type="number" name="rolls-remaining" min="0" max="2" value="2">
-      <label for="rolls-remaining">rolls remaining</label>
+      <label for="rolls-remaining">rolls remaining</label><div class="help-icon tooltip">
+        <span class="tooltip-text">Test tooltip</span>
+      </div>
       <div id="dice">
         <div class="die-selector"></div>
         <div class="die-selector"></div>
@@ -29,7 +31,10 @@
         <div class="die-selector"></div>
         <div class="die-selector"></div>
       </div>
-      <div id="recommendation">Recommended:<br>
+      <div id="recommendation">
+        Recommended:<div class="help-icon tooltip">
+          <span class="tooltip-text">Test tooltip</span>
+        </div><br>
         <div class="recommended-action">Hold</div>
         <div class="recommended-action">Hold</div>
         <div class="recommended-action">Hold</div>
@@ -39,75 +44,101 @@
       <div id="scores-label" onclick="toggleScores()">
         <div id="rotating-icon">&#x25BA</div>Score Options</div>
       <div id="scores-dropdown">
-        <div class="scores-column">
-          <div class="score-option">
-            <div class="expected">5pts</div>
-            <input id="ones" type="checkbox" name="ones">
-            <label for="ones">Ones</label>
-          </div>
-          <div class="score-option">
-            <div class="expected">0pts</div>
-            <input id="twos" type="checkbox" name="twos">
-            <label for="twos">Twos</label>
-          </div>
-          <div class="score-option">
-            <div class="expected">0pts</div>
-            <input id="threes" type="checkbox" name="threes">
-            <label for="threes">Threes</label>
-          </div>
-          <div class="score-option">
-            <div class="expected">0pts</div>
-            <input id="fours" type="checkbox" name="fours">
-            <label for="fours">Fours</label>
-          </div>
-          <div class="score-option">
-            <div class="expected">0pts</div>
-            <input id="fives" type="checkbox" name="fives">
-            <label for="fives">Fives</label>
-          </div>
-          <div class="score-option">
-            <div class="expected">0pts</div>
-            <input id="sixes" type="checkbox" name="sixes">
-            <label for="sixes">Sixes</label>
-          </div>
-        </div>
-        <div class="scores-column">
-          <div class="score-option">
-            <div class="expected">5pts</div>
-            <input id="3-of-a-kind" type="checkbox" name="3-of-a-kind">
-            <label for="3-of-a-kind">3-of-a-kind</label>
-          </div>
-          <div class="score-option">
-            <div class="expected">5pts</div>
-            <input id="4-of-a-kind" type="checkbox" name="4-of-a-kind">
-            <label for="4-of-a-kind">4-of-a-kind</label>
-          </div>
-          <div class="score-option">
-            <div class="expected">25pts</div>
-            <input id="full-house" type="checkbox" name="full-house">
-            <label for="full-house">Full House</label>
-          </div>
-          <div class="score-option">
-            <div class="expected">30pts</div>
-            <input id="small-straight" type="checkbox" name="small-straight">
-            <label for="small-straight">Small Straight</label>
-          </div>
-          <div class="score-option">
-            <div class="expected">40pts</div>
-            <input id="large-straight" type="checkbox" name="large-straight">
-            <label for="large-straight">Large Straight</label>
-          </div>
-          <div class="score-option">
-            <div class="expected">50pts</div>
-            <input id="yahtzee" type="checkbox" name="yahtzee">
-            <label for="yahtzee">Yahtzee</label>
-          </div>
-          <div class="score-option">
-            <div class="expected">5pts</div>
-            <input id="chance" type="checkbox" name="chance">
-            <label for="chance">Chance</label>
-          </div>
-        </div>
+        <table class="scores-column">
+          <tr>
+            <td><div class="expected">5pts</div></td>
+            <td><input id="ones" type="checkbox" name="ones"></td>
+            <td><label for="ones">Ones</label><div class="help-icon tooltip">
+              <span class="tooltip-text">Test tooltip</span>
+            </div></td>
+          </tr>
+          <tr>
+            <td><div class="expected">0pts</div></td>
+            <td><input id="twos" type="checkbox" name="twos"></td>
+            <td><label for="twos">Twos</label><div class="help-icon tooltip">
+              <span class="tooltip-text">Test tooltip</span>
+            </div></td>
+          </tr>
+          <tr>
+            <td><div class="expected">0pts</div></td>
+            <td><input id="threes" type="checkbox" name="threes"></td>
+            <td><label for="threes">Threes</label><div class="help-icon tooltip">
+              <span class="tooltip-text">Test tooltip</span>
+            </div></td>
+          </tr>
+          <tr>
+            <td><div class="expected">0pts</div></td>
+            <td><input id="fours" type="checkbox" name="fours"></td>
+            <td><label for="fours">Fours</label><div class="help-icon tooltip">
+              <span class="tooltip-text">Test tooltip</span>
+            </div></td>
+          </tr>
+          <tr>
+            <td><div class="expected">0pts</div></td>
+            <td><input id="fives" type="checkbox" name="fives"></td>
+            <td><label for="fives">Fives</label><div class="help-icon tooltip">
+              <span class="tooltip-text">Test tooltip</span>
+            </div></td>
+          </tr>
+          <tr>
+            <td><div class="expected">0pts</div></td>
+            <td><input id="sixes" type="checkbox" name="sixes"></td>
+            <td><label for="sixes">Sixes</label><div class="help-icon tooltip">
+              <span class="tooltip-text">Test tooltip</span>
+            </div></td>
+          </tr>
+        </table>
+        <table class="scores-column">
+          <tr>
+            <td><div class="expected">5pts</div></td>
+            <td><input id="3-of-a-kind" type="checkbox" name="3-of-a-kind"></td>
+            <td><label for="3-of-a-kind">3-of-a-kind</label><div class="help-icon tooltip">
+              <span class="tooltip-text">Test tooltip</span>
+            </div></td>
+          </tr>
+          <tr>
+            <td><div class="expected">5pts</div></td>
+            <td><input id="4-of-a-kind" type="checkbox" name="4-of-a-kind"></td>
+            <td><label for="4-of-a-kind">4-of-a-kind</label><div class="help-icon tooltip">
+              <span class="tooltip-text">Test tooltip</span>
+            </div></td>
+          </tr>
+          <tr>
+            <td><div class="expected">25pts</div></td>
+            <td><input id="full-house" type="checkbox" name="full-house"></td>
+            <td><label for="full-house">Full House</label><div class="help-icon tooltip">
+              <span class="tooltip-text">Test tooltip</span>
+            </div></td>
+          </tr>
+          <tr>
+            <td><div class="expected">30pts</div></td>
+            <td><input id="small-straight" type="checkbox" name="small-straight"></td>
+            <td><label for="small-straight">Small Straight</label><div class="help-icon tooltip">
+              <span class="tooltip-text">Test tooltip</span>
+            </div></td>
+          </tr>
+          <tr>
+            <td><div class="expected">40pts</div></td>
+            <td><input id="large-straight" type="checkbox" name="large-straight"></td>
+            <td><label for="large-straight">Large Straight</label><div class="help-icon tooltip">
+              <span class="tooltip-text">Test tooltip</span>
+            </div></td>
+          </tr>
+          <tr>
+            <td><div class="expected">50pts</div></td>
+            <td><input id="yahtzee" type="checkbox" name="yahtzee"></td>
+            <td><label for="yahtzee">Yahtzee</label><div class="help-icon tooltip">
+              <span class="tooltip-text">Test tooltip</span>
+            </div></td>
+          </tr>
+          <tr>
+            <td><div class="expected">5pts</div></td>
+            <td><input id="chance" type="checkbox" name="chance"></td>
+            <td><label for="chance">Chance</label><div class="help-icon tooltip">
+              <span class="tooltip-text">Test tooltip</span>
+            </div></td>
+          </tr>
+        </table>
       </div>
     </div>
   </div>

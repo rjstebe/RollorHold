@@ -41,16 +41,29 @@ var showScores = false;
 
 function onLoad(){
   loadDieSelectors();
+  loadQuestionIcons();
 }
 
 function loadDieSelectors(){
   var dieSelectors = document.getElementsByClassName('die-selector');
   for(i = 0; i < dieSelectors.length; i++){
-    dieSelectors[i].innerHTML=
+    dieSelectors[i].innerHTML =
     `<button class="increment-value" type="button" onclick="dice[${i}].increment_face()">&#x25B2;</button>
     <img class="die-image" width="50" alt="Dice-1-b" src="img/Dice-1-b.svg">
     <button class="decrement-value" type="button" onclick="dice[${i}].decrement_face()">&#x25BC;</button>`
     dice[i] = new die(1, dieSelectors[i].getElementsByClassName("die-image")[0]);
+  }
+}
+
+function loadQuestionIcons(){
+  var icons = document.getElementsByClassName("help-icon");
+  var icon =
+  ` <svg xmlns="http://www.w3.org/2000/svg" width="0.75em" height="0.75em" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
+    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+    <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+  </svg>`;
+  for(i = 0; i < icons.length; i++){
+    icons[i].insertAdjacentHTML("afterbegin", icon);
   }
 }
 
@@ -59,12 +72,17 @@ function toggleScores(){
   var dropdown = document.getElementById("scores-dropdown");
   showScores = !showScores;
   if (showScores){
-    icon.style.setProperty("transform", "rotate(90deg)");
-    dropdown.style.setProperty("height", "145px");
+    icon.style.transform = "rotate(90deg)";
+    dropdown.style.height = "170px";
+    dropdown.addEventListener("transitionend", (e) => {
+      if (e.target == dropdown){
+        dropdown.style.overflow = "visible";
+      }
+    }, {once: true});
   }
   else{
-    icon.style.setProperty("transform", "rotate(0deg)");
-    dropdown.style.setProperty("height", "0");
+    icon.style.transform = "rotate(0deg)";
+    dropdown.style.height = "0";
+    dropdown.style.overflow = "hidden";
   }
-
 }
