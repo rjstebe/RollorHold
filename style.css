@@ -1,9 +1,44 @@
-#panel{
-  background-color: #FFF8C1
+body{
+  background-color: #2FB371
+}
+
+h1,h2{
+  font-family: "Aharoni", "Trebuchet MS", sans-serif;
+}
+
+label, div{
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+#title{
+  color: #CB2F2F
+}
+
+#subtitle{
+  padding-left: 100px;
+  color: #F0C929
+}
+
+#content{
+  display: flex;
+}
+
+form{
+  background-color: #FFF8C1;
+  padding: 10px;
+  margin: auto;
 }
 
 #rolls-remaining{
-  width: 2em
+  width: 2em;
+}
+
+#dice{
+  margin: 10px 0;
+}
+
+#recommendation{
+  margin: 10px 0;
 }
 
 .die-selector{
@@ -39,8 +74,37 @@ button:hover{
 
 .recommended-action{
   display: inline-block;
-  width: 50px;
-  border: 1px yellow;
+  width: 48px;
+  border: solid 1px #F0C929;
   background: yellow;
   text-align: center;
+}
+
+#scores-label{
+  text-align: center;
+  color: white;
+  background-color: #CB2F2F
+}
+
+#rotating-icon{
+  display: inline-block;
+  transform: rotate(0deg);
+  transition-property: transform;
+  transition-duration: 0.25s;
+}
+
+#scores-dropdown{
+  display: flex;
+  overflow: hidden;
+  height: 0;
+  transition-property: height;
+  transition-duration: 0.25s;
+}
+
+.scores-column div{
+  display: block;
+}
+
+footer{
+  font-family: "Trebuchet MS", sans-serif;
 }

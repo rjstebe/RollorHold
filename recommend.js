@@ -37,6 +37,7 @@ class die {
 }
 
 var dice = {};
+var showScores = false;
 
 function onLoad(){
   loadDieSelectors();
@@ -51,4 +52,19 @@ function loadDieSelectors(){
     <button class="decrement-value" type="button" onclick="dice[${i}].decrement_face()">&#x25BC;</button>`
     dice[i] = new die(1, dieSelectors[i].getElementsByClassName("die-image")[0]);
   }
+}
+
+function toggleScores(){
+  var icon = document.getElementById("rotating-icon");
+  var dropdown = document.getElementById("scores-dropdown");
+  showScores = !showScores;
+  if (showScores){
+    icon.style.setProperty("transform", "rotate(90deg)");
+    dropdown.style.setProperty("height", "140px");
+  }
+  else{
+    icon.style.setProperty("transform", "rotate(0deg)");
+    dropdown.style.setProperty("height", "0");
+  }
+
 }

@@ -6,40 +6,98 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body onload="onLoad()">
+  <header>
+    <h1 id="title">Roll or Hold</h1>
+    <h2 id="subtitle">A Calculator for Dice Rolling Games</h2>
+  </header>
+
   <!-- HTML5 article tag for content -->
   <div id="content">
-
-    <header>Roll or Hold</header>
-
-    <div id="panel">
-      <form name="Calculator" action="">
-        <input id="rolls-remaining" type="number" name="rolls-remaining" min="0" max="2" value="2">
-        <label for="rolls-remaining">rolls remaining</label>
-        <div id="dice">
-          <div class="die-selector"></div>
-          <div class="die-selector"></div>
-          <div class="die-selector"></div>
-          <div class="die-selector"></div>
-          <div class="die-selector"></div>
-        </div>
-        <div id="recommendation">
-          Recommended:<br>
-          <div class="recommended-action">Roll</div>
-          <div class="recommended-action">Roll</div>
-          <div class="recommended-action">Roll</div>
-          <div class="recommended-action">Roll</div>
-          <div class="recommended-action">Roll</div>
-        </div>
-        <div id="scores">
-          <div class="scores-column">
+    <nav>
+      <a href="/index.html">Yahtzee</a>
+      <a href="/yam-slam.html/">Yam-Slam</a>
+      <a href="/how-to-use.html">How to Use</a>
+    </nav>
+    <form name="Calculator" action="">
+      <input id="rolls-remaining" type="number" name="rolls-remaining" min="0" max="2" value="2">
+      <label for="rolls-remaining">rolls remaining</label>
+      <div id="dice">
+        <div class="die-selector"></div>
+        <div class="die-selector"></div>
+        <div class="die-selector"></div>
+        <div class="die-selector"></div>
+        <div class="die-selector"></div>
+      </div>
+      <div id="recommendation">Recommended:<br>
+        <div class="recommended-action">Roll</div>
+        <div class="recommended-action">Roll</div>
+        <div class="recommended-action">Roll</div>
+        <div class="recommended-action">Roll</div>
+        <div class="recommended-action">Roll</div>
+      </div>
+      <div id="scores-label" onclick="toggleScores()">
+        <div id="rotating-icon">&#x25BA</div>Score Options</div>
+      <div id="scores-dropdown">
+        <div class="scores-column">
+          <div class="score-option">
+            <input id="ones" type="checkbox" name="ones">
+            <label for="ones">Ones</label>
           </div>
-          <div class="scores-column">
+          <div class="score-option">
+            <input id="twos" type="checkbox" name="twos">
+            <label for="twos">Twos</label>
+          </div>
+          <div class="score-option">
+            <input id="threes" type="checkbox" name="threes">
+            <label for="threes">Threes</label>
+          </div>
+          <div class="score-option">
+            <input id="fours" type="checkbox" name="fours">
+            <label for="fours">Fours</label>
+          </div>
+          <div class="score-option">
+            <input id="fives" type="checkbox" name="fives">
+            <label for="fives">Fives</label>
+          </div>
+          <div class="score-option">
+            <input id="sixes" type="checkbox" name="sixes">
+            <label for="sixes">Sixes</label>
           </div>
         </div>
-      </form>
-    </div>
-
-    <footer>Ryan Stebe &copy; 2021</footer>
+        <div class="scores-column">
+          <div class="score-option">
+            <input id="3-of-a-kind" type="checkbox" name="3-of-a-kind">
+            <label for="3-of-a-kind">3-of-a-kind</label>
+          </div>
+          <div class="score-option">
+            <input id="4-of-a-kind" type="checkbox" name="4-of-a-kind">
+            <label for="4-of-a-kind">4-of-a-kind</label>
+          </div>
+          <div class="score-option">
+            <input id="full-house" type="checkbox" name="full-house">
+            <label for="full-house">Full House</label>
+          </div>
+          <div class="score-option">
+            <input id="small-straight" type="checkbox" name="small-straight">
+            <label for="small-straight">Small Straight</label>
+          </div>
+          <div class="score-option">
+            <input id="large-straight" type="checkbox" name="large-straight">
+            <label for="large-straight">Large Straight</label>
+          </div>
+          <div class="score-option">
+            <input id="yahtzee" type="checkbox" name="yahtzee">
+            <label for="yahtzee">Yahtzee</label>
+          </div>
+          <div class="score-option">
+            <input id="chance" type="checkbox" name="chance">
+            <label for="chance">Chance</label>
+          </div>
+        </div>
+      </div>
+    </form>
   </div>
+
+  <footer>Ryan Stebe &copy; 2021</footer>
 </body>
 </html>
