@@ -15,18 +15,32 @@ label, div{
 }
 
 #subtitle{
-  padding-left: 100px;
   color: #F0C929
 }
 
 #content{
-  display: flex;
+  display: table;
+  margin: auto;
 }
 
-form{
+nav{
+  background-color: #CB2F2F;
+}
+
+.nav-button{
+  display: inline-block;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-button:hover{
+  background-color: #F25555;
+}
+
+#calculator{
   background-color: #FFF8C1;
   padding: 10px;
-  margin: auto;
 }
 
 #rolls-remaining{
@@ -83,7 +97,12 @@ button:hover{
 #scores-label{
   text-align: center;
   color: white;
+  cursor: pointer;
   background-color: #CB2F2F
+}
+
+#scores-label:hover{
+  background-color: #F25555;
 }
 
 #rotating-icon{

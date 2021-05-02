@@ -2,6 +2,7 @@
 <html>
 <head>
   <title> Roll Or Hold </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <script type="text/javascript" src="recommend.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -14,11 +15,11 @@
   <!-- HTML5 article tag for content -->
   <div id="content">
     <nav>
-      <a href="/index.html">Yahtzee</a>
-      <a href="/yam-slam.html/">Yam-Slam</a>
-      <a href="/how-to-use.html">How to Use</a>
+      <div class="nav-button" href="/index.html">Yahtzee</div>
+      <div class="nav-button" href="/yam-slam.html/">Yam-Slam</div>
+      <div class="nav-button" href="/how-to-use.html">How to Use</div>
     </nav>
-    <form name="Calculator" action="">
+    <div id="calculator">
       <input id="rolls-remaining" type="number" name="rolls-remaining" min="0" max="2" value="2">
       <label for="rolls-remaining">rolls remaining</label>
       <div id="dice">
@@ -95,7 +96,7 @@
           </div>
         </div>
       </div>
-    </form>
+    </div>
   </div>
 
   <footer>Ryan Stebe &copy; 2021</footer>
