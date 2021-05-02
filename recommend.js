@@ -60,7 +60,7 @@ function toggleScores(){
   showScores = !showScores;
   if (showScores){
     icon.style.setProperty("transform", "rotate(90deg)");
-    dropdown.style.setProperty("height", "140px");
+    dropdown.style.setProperty("height", "145px");
   }
   else{
     icon.style.setProperty("transform", "rotate(0deg)");

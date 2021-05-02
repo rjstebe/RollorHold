@@ -1,13 +1,13 @@
-body{
-  background-color: #2FB371
-}
-
 h1,h2{
   font-family: "Aharoni", "Trebuchet MS", sans-serif;
 }
 
 label, div{
   font-family: "Trebuchet MS", sans-serif;
+}
+
+body{
+  background-color: #2FB371
 }
 
 #title{
@@ -120,8 +120,26 @@ button:hover{
   transition-duration: 0.25s;
 }
 
+.scores-column{
+  margin: 0 10px;
+}
+
 .scores-column div{
-  display: block;
+  display: flex;
+}
+
+.score-option{
+  display: flex;
+  flex-direction: row;
+}
+
+.score-option *{
+  display: inline-block;
+}
+
+.expected {
+  background-color: yellow;
+  border: solid 1px #F0C929;
 }
 
 footer{
