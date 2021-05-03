@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title> Roll Or Hold </title>
+  <title> Roll Or Hold: Yahtzee </title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>
-    var pointType = "randomize";
+    var type = "Yahtzee";
   </script>
   <script type="text/javascript" src="recommend.js"></script>
   <link rel="stylesheet" href="style.css">
@@ -21,7 +21,7 @@
       --><a href="how-to-use.html"><div class="nav-button">How to Use</div></a>
     </nav>
     <div id="calculator">
-      <input id="rolls-remaining" type="number" name="rolls-remaining" oninput="updateOutput()" min="0" max="2" value="2">
+      <input class="short-number-input" id="rolls-remaining" type="number" name="rolls-remaining" oninput="updateOutput()" min="0" max="2" value="2">
       <label for="rolls-remaining">rolls remaining</label><div class="help-icon tooltip">
         <span class="tooltip-text">Test tooltip</span>
       </div>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Roll Or Hold: Yam-Slam </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    var type = "Yam-Slam";
+  </script>
+  <script type="text/javascript" src="recommend.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="onLoad()">
+  <header>
+    <h1 id="title">Roll or Hold</h1>
+    <h2 id="subtitle">A Calculator for Dice Rolling Games</h2>
+  </header>
+  <div id="content">
+    <nav>
+      <a href="index.html"><div class="nav-button">Yahtzee</div></a><!--
+      --><a href="yam-slam.html"><div class="nav-button" style="background-color: #b32424">Yam-Slam</div></a><!--
+      --><a href="how-to-use.html"><div class="nav-button">How to Use</div></a>
+    </nav>
+    <div id="calculator">
+      <input class="short-number-input" id="rolls-remaining" type="number" name="rolls-remaining" oninput="updateOutput()" min="0" max="2" value="2">
+      <label for="rolls-remaining">rolls remaining</label><div class="help-icon tooltip">
+        <span class="tooltip-text">Test tooltip</span>
+      </div>
+      <div id="dice">
+        <div class="die-selector"></div>
+        <div class="die-selector"></div>
+        <div class="die-selector"></div>
+        <div class="die-selector"></div>
+        <div class="die-selector"></div>
+      </div>
+      <div id="recommendation">Recommended:<div class="help-icon tooltip">
+          <span class="tooltip-text">Test tooltip</span>
+        </div><br>
+        <div class="recommended-action">Hold</div>
+        <div class="recommended-action">Hold</div>
+        <div class="recommended-action">Hold</div>
+        <div class="recommended-action">Hold</div>
+        <div class="recommended-action">Hold</div>
+      </div>
+      <div id="scores-label" onclick="toggleScores()">
+        <div id="rotating-icon">&#x25BA</div>Score Options</div>
+      <div id="scores-dropdown">
+        <table class="scores-column">
+          <tr>
+            <td><div class="expected">5pts</div></td>
+            <td><input class="short-number-input" id="2-pairs" type="number" name="2-pairs" oninput="updateOutput()" max="4" min="0" value="4"></td>
+            <td><label for="2-pairs">2 Pairs</label><div class="help-icon tooltip">
+              <span class="tooltip-text">Test tooltip</span>
+            </div></td>
+          </tr>
+          <tr>
+            <td><div class="expected">10pts</div></td>
+            <td><input class="short-number-input" id="3-of-a-kind" type="number" name="3-of-a-kind" oninput="updateOutput()" max="4" min="0" value="4"></td>
+            <td><label for="3-of-a-kind">3-of-a-kind</label><div class="help-icon tooltip">
+              <span class="tooltip-text">Test tooltip</span>
+            </div></td>
+          </tr>
+          <tr>
+            <td><div class="expected">20pts</div></td>
+            <td><input class="short-number-input" id="small-straight" type="number" name="small-straight" oninput="updateOutput()" max="4" min="0" value="4"></td>
+            <td><label for="small-straight">Small Straight</label><div class="help-icon tooltip">
+              <span class="tooltip-text">Test tooltip</span>
+            </div></td>
+          </tr>
+          <tr>
+            <td><div class="expected">25pts</div></td>
+            <td><input class="short-number-input" id="flush" type="number" name="flush" oninput="updateOutput()" max="4" min="0" value="4"></td>
+            <td><label for="flush">Flush</label><div class="help-icon tooltip">
+              <span class="tooltip-text">Test tooltip</span>
+            </div></td>
+          </tr>
+          <tr>
+            <td><div class="expected">30pts</div></td>
+            <td><input class="short-number-input" id="full-house" type="number" name="full-house" oninput="updateOutput()" max="4" min="0" value="4"></td>
+            <td><label for="full-house">Full House</label><div class="help-icon tooltip">
+              <span class="tooltip-text">Test tooltip</span>
+            </div></td>
+          </tr>
+          <tr>
+            <td><div class="expected">40pts</div></td>
+            <td><input class="short-number-input" id="4-of-a-kind" type="number" name="4-of-a-kind" oninput="updateOutput()" max="4" min="0" value="4"></td>
+            <td><label for="4-of-a-kind">4-of-a-kind</label><div class="help-icon tooltip">
+              <span class="tooltip-text">Test tooltip</span>
+            </div></td>
+          </tr>
+          <tr>
+            <td><div class="expected">50pts</div></td>
+            <td><input class="short-number-input" id="large-straight" type="number" name="large-straight" oninput="updateOutput()" max="4" min="0" value="4"></td>
+            <td><label for="large-straight">Large Straight</label><div class="help-icon tooltip">
+              <span class="tooltip-text">Test tooltip</span>
+            </div></td>
+          </tr>
+        </table>
+        <table class="scores-column">
+          <tr>
+            <td><div class="expected">50pts</div></td>
+            <td><label for="yam-slam">Yam-Slam</label><div class="help-icon tooltip">
+              <span class="tooltip-text">Test tooltip</span>
+            </div></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <footer>Ryan Stebe &copy; 2021</footer>
+</body>
+</html>

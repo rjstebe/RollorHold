@@ -75,7 +75,7 @@ function toggleScores(){
   showScores = !showScores;
   if (showScores){
     icon.style.transform = "rotate(90deg)";
-    dropdown.style.height = "170px";
+    dropdown.style.height = "179.33px";
     dropdown.addEventListener("transitionend", (e) => {
       if (e.target == dropdown){
         dropdown.style.overflow = "visible";
@@ -95,7 +95,7 @@ function updateOutput(){
     e.target.style.setProperty("background-color", "yellow");
   };
   //if randomizing score options' values, update each of them
-  if (pointType == "randomize"){
+  if (type == "Yahtzee"){
     var expecteds = document.getElementsByClassName("expected");
     for (i = 0; i < expecteds.length; i++){
       var oldValue = expecteds[i].innerHTML;

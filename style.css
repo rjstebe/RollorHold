@@ -85,7 +85,7 @@ nav{
   padding: 10px;
 }
 
-#rolls-remaining{
+.short-number-input{
   width: 2em;
 }
 
@@ -163,6 +163,10 @@ button:hover{
 .scores-column{
   margin: 0 10px;
   display: table;
+}
+
+tr{
+  height: 23.33px;
 }
 
 .expected {
