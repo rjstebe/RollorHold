@@ -72,15 +72,16 @@ function loadQuestionIcons(){
 function toggleScores(){
   var icon = document.getElementById("rotating-icon");
   var dropdown = document.getElementById("scores-dropdown");
+  var callback = (e) => {
+    if (e.target == dropdown){
+      dropdown.style.overflow = "visible";
+    }
+  };
   showScores = !showScores;
   if (showScores){
     icon.style.transform = "rotate(90deg)";
     dropdown.style.height = "210px";
-    dropdown.addEventListener("transitionend", (e) => {
-      if (e.target == dropdown){
-        dropdown.style.overflow = "visible";
-      }
-    }, {once: true});
+    dropdown.addEventListener("transitionend", callback, {once: true});
   }
   else{
     icon.style.transform = "rotate(0deg)";
