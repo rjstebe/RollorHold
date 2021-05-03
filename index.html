@@ -23,7 +23,7 @@
     <div id="calculator">
       <input class="short-number-input" id="rolls-remaining" type="number" name="rolls-remaining" oninput="updateOutput()" min="0" max="2" value="2">
       <label for="rolls-remaining">rolls remaining</label><div class="help-icon tooltip">
-        <div class="tooltip-text">Test tooltip</div>
+        <div class="tooltip-text">The number of rolls left in the turn.</div>
       </div>
       <div id="dice">
         <div class="die-selector"></div>
@@ -33,7 +33,7 @@
         <div class="die-selector"></div>
       </div>
       <div id="recommendation">Recommended:<div class="help-icon tooltip">
-          <div class="tooltip-text">Test tooltip</div>
+          <div class="tooltip-text">The calculator recommends for each die whether to hold it or roll it.</div>
         </div><br>
         <div class="recommended-action">Hold</div>
         <div class="recommended-action">Hold</div>
@@ -49,42 +49,42 @@
             <td><div class="expected">5pts</div></td>
             <td><input id="ones" type="checkbox" name="ones" oninput="updateOutput()"></td>
             <td><label for="ones">Ones</label><div class="help-icon tooltip">
-              <div class="tooltip-text">Test tooltip</div>
+              <div class="tooltip-text">Ones is worth 1 point for each die that has a value of 1.</div>
             </div></td>
           </tr>
           <tr>
             <td><div class="expected">0pts</div></td>
             <td><input id="twos" type="checkbox" name="twos" oninput="updateOutput()"></td>
             <td><label for="twos">Twos</label><div class="help-icon tooltip">
-              <div class="tooltip-text">Test tooltip</div>
+              <div class="tooltip-text">Twos is worth 2 points for each die that has a value of 2.</div>
             </div></td>
           </tr>
           <tr>
             <td><div class="expected">0pts</div></td>
             <td><input id="threes" type="checkbox" name="threes" oninput="updateOutput()"></td>
             <td><label for="threes">Threes</label><div class="help-icon tooltip">
-              <div class="tooltip-text">Test tooltip</div>
+              <div class="tooltip-text">Threes is worth 3 points for each die that has a value of 3.</div>
             </div></td>
           </tr>
           <tr>
             <td><div class="expected">0pts</div></td>
             <td><input id="fours" type="checkbox" name="fours" oninput="updateOutput()"></td>
             <td><label for="fours">Fours</label><div class="help-icon tooltip">
-              <div class="tooltip-text">Test tooltip</div>
+              <div class="tooltip-text">Fours is worth 4 points for each die that has a value of 4.</div>
             </div></td>
           </tr>
           <tr>
             <td><div class="expected">0pts</div></td>
             <td><input id="fives" type="checkbox" name="fives" oninput="updateOutput()"></td>
             <td><label for="fives">Fives</label><div class="help-icon tooltip">
-              <div class="tooltip-text">Test tooltip</div>
+              <div class="tooltip-text">Fives is worth 5 points for each die that has a value of 5.</div>
             </div></td>
           </tr>
           <tr>
             <td><div class="expected">0pts</div></td>
             <td><input id="sixes" type="checkbox" name="sixes" oninput="updateOutput()"></td>
             <td><label for="sixes">Sixes</label><div class="help-icon tooltip">
-              <div class="tooltip-text">Test tooltip</div>
+              <div class="tooltip-text">Sixes is worth 6 points for each die that has a value of 6.</div>
             </div></td>
           </tr>
         </table>
@@ -93,49 +93,49 @@
             <td><div class="expected">5pts</div></td>
             <td><input id="3-of-a-kind" type="checkbox" name="3-of-a-kind" oninput="updateOutput()"></td>
             <td><label for="3-of-a-kind">3-of-a-kind</label><div class="help-icon tooltip">
-              <div class="tooltip-text">Test tooltip</div>
+              <div class="tooltip-text">3-of-a-kind is when three or more dice have the same value. It is worth the total of all five dice values.</div>
             </div></td>
           </tr>
           <tr>
             <td><div class="expected">5pts</div></td>
             <td><input id="4-of-a-kind" type="checkbox" name="4-of-a-kind" oninput="updateOutput()"></td>
             <td><label for="4-of-a-kind">4-of-a-kind</label><div class="help-icon tooltip">
-              <div class="tooltip-text">Test tooltip</div>
+              <div class="tooltip-text">4-of-a-kind is when four or more dice have the same value. It is worth the total of all five dice values.</div>
             </div></td>
           </tr>
           <tr>
             <td><div class="expected">25pts</div></td>
             <td><input id="full-house" type="checkbox" name="full-house" oninput="updateOutput()"></td>
             <td><label for="full-house">Full House</label><div class="help-icon tooltip">
-              <div class="tooltip-text">Test tooltip</div>
+              <div class="tooltip-text">Full House is when there are three dice that have the same value, plus a pair of dice that share a value. It is worth 25 points.</div>
             </div></td>
           </tr>
           <tr>
-            <td><div class="expected">30pts</div></td>
+            <td><div class="expected">0pts</div></td>
             <td><input id="small-straight" type="checkbox" name="small-straight" oninput="updateOutput()"></td>
             <td><label for="small-straight">Small Straight</label><div class="help-icon tooltip">
-              <div class="tooltip-text">Test tooltip</div>
+              <div class="tooltip-text">Small Straight is when there are four or more dice with consecutive values. It is worth 30 points.</div>
             </div></td>
           </tr>
           <tr>
-            <td><div class="expected">40pts</div></td>
+            <td><div class="expected">0pts</div></td>
             <td><input id="large-straight" type="checkbox" name="large-straight" oninput="updateOutput()"></td>
             <td><label for="large-straight">Large Straight</label><div class="help-icon tooltip">
-              <div class="tooltip-text">Test tooltip</div>
+              <div class="tooltip-text">Large Straight is when all five dice's values are consecutive. It is worth 40 points.</div>
             </div></td>
           </tr>
           <tr>
             <td><div class="expected">50pts</div></td>
             <td><input id="yahtzee" type="checkbox" name="yahtzee" oninput="updateOutput()"></td>
             <td><label for="yahtzee">Yahtzee</label><div class="help-icon tooltip">
-              <div class="tooltip-text">Test tooltip</div>
+              <div class="tooltip-text">Yahtzee is when all five dice have the same value. The first one is worth 50 points. Later Yahtzee's can be counted towards something else, and gives an additional 100 points.</div>
             </div></td>
           </tr>
           <tr>
             <td><div class="expected">5pts</div></td>
             <td><input id="chance" type="checkbox" name="chance" oninput="updateOutput()"></td>
             <td><label for="chance">Chance</label><div class="help-icon tooltip">
-              <div class="tooltip-text">Test tooltip asdfs f sdf as aa ssddfdsfa asdfsdfdf as d</div>
+              <div class="tooltip-text">Any result can count towards chance, and it is worth the total of all five dice values.</div>
             </div></td>
           </tr>
         </table>
