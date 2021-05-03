@@ -75,7 +75,7 @@ function toggleScores(){
   showScores = !showScores;
   if (showScores){
     icon.style.transform = "rotate(90deg)";
-    dropdown.style.height = "179.33px";
+    dropdown.style.height = "210px";
     dropdown.addEventListener("transitionend", (e) => {
       if (e.target == dropdown){
         dropdown.style.overflow = "visible";

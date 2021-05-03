@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Roll Or Hold: Yahtzee </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    var type = "Yahtzee";
+  </script>
+  <script type="text/javascript" src="recommend.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="onLoad()">
+  <header>
+    <h1 id="title">Roll or Hold</h1>
+    <h2 id="subtitle">A Calculator for Dice Rolling Games</h2>
+  </header>
+  <div id="content">
+    <nav>
+      <a href="index.html"><div class="nav-button">Yahtzee</div></a><!--
+      --><a href="yam-slam.html"><div class="nav-button">Yam-Slam</div></a><!--
+      --><a href="how-to-use.html"><div class="nav-button" style="background-color: #b32424">How to Use</div></a>
+    </nav>
+    <div id="calculator">
+      <p>Roll or Hold is a calculator that automatically calculates which dice a player should hold and which they should keep to obtain the highest score for the turn in a game of Yahtzee or Yam-Slam. You can input the current dice, rolls remaining, and score options, which all factor into the calculator's suggestion.</p>
+      <p>The number of rolls remaining in the turn can be given to the calculator in the rolls remaining field. The number of rolls remaining in the turn changes the probability of ending the turn with different dice values, and so changing this value affects the calculation.</p>
+      <p>Pressing the buttons above or below a die changes the die's value. This is how you select the die values that the calculator will use to make a recommendation.</p>
+      <p>Beneath each die, a yellow rectangle show's the calculator's recommendation for that die. The recommendation will be either to "Roll" the die or to "Hold" the die.</p>
+      <p>The "score options" button reveals all the scoring options for the current game. This button can be pressed again to close the scores panel.</p>
+      <p>In Yahtzee, each score option shows the calculated score that would be gained by the player if the current set of dice values were to be entered into that option. The checkbox determines whether or not the scoring option has already been used. Checked checkboxes represent a scoring option that has already been used, and an unchecked box represents an option that is yet to be used.</p>
+      <p>In Yam-Slam, each score option shows the score that the option would provide, which is unchanged by the dice values. The number next to each option represents the number of chips of that option remaining, and can be altered to match the state of the game.</p>
+      <p>The <span class="help-icon"></span> symbol shows a tooltip about the feature beside it when hovered over, or when tapped on a mobile device.</p>
+      <p>Details on how to play Yahtzee and Yam-Slam can be found at the following links:</p>
+      <ul>
+        <li><a href="https://www.ultraboardgames.com/yahtzee/game-rules.php">Yahtzee</a></li>
+        <li><a href="https://www.ultraboardgames.com/yamslam/game-rules.php">Yam-Slam</a></li>
+      <ul>
+    </div>
+  </div>
+
+  <footer>Ryan Stebe &copy; 2021</footer>
+</body>
+</html>
