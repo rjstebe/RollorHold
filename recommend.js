@@ -80,7 +80,7 @@ function toggleScores(){
   showScores = !showScores;
   if (showScores){
     icon.style.transform = "rotate(90deg)";
-    dropdown.style.height = "210px";
+    dropdown.style.height = "256px";
     dropdown.addEventListener("transitionend", callback, {once: true});
   }
   else{
